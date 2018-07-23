@@ -17,14 +17,14 @@
 <style scoped="scoped">
 	.validateMsg {
 		width: 90%;
-		margin: 0 auto;
-		border: 1px solid #ccc;
 		height: 30px;
+		margin: 0 auto;
+		padding-left: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
 		line-height: 30px;
 		color: orangered;
 		box-sizing: border-box;
-		border-radius: 5px;
-		padding-left: 10px;
 		font-size: 12px;
 	}
 </style>

@@ -15,9 +15,7 @@ function replaceStr(oldVal, val) {
 function isLegal(value){
 	value=value.replace(/[\s]/g,'');
 	let num=value.slice(0,value.length-1).split('');
-	console.log(num[num.length-1]);
 	let lastNum=value.slice(-1);
-	console.log(lastNum);
 	let len=num.length;
 	let sum=0;
 	for(let i=len-1;i>=0;i-=2){
