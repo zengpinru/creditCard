@@ -53,6 +53,7 @@
 	           name: {{userName}}<br>
 	           expiry: {{validThru}}<br>
 	           cvc: {{cvc}}<br>
+	           isLegal:{{isPassValidate}}<br />
 	       </div>
     	</div>
 	</div>
@@ -61,6 +62,7 @@
 <script>
 	import CreditCard from "@/components/CreditCard";
 	import Validate from "@/components/Validate";
+	import {isLegal} from '../common/common.js';
 	export default {
 		name: 'CreditCardBox',
 		data: function() {
@@ -75,7 +77,8 @@
 				validThruStyle: false,
 				validateMsg: '',
 				isPass: false,
-				showResult: false
+				showResult: false,
+				isPassValidate:''
 			}
 		},
 		components: {
@@ -132,7 +135,11 @@
 				}
 				if(!this.isPass) {
 					this.showResult = true;
-					console.log(this.cardNum);
+					if(isLegal(this.cardNum)){
+						this.isPassValidate='legal';
+					}else{
+						this.isPassValidate='not legal';
+					}
 				}
 			},
 			replace:function(e){
