@@ -4,12 +4,19 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+//css
+import 'css/reset.css'
+
+//vuex
+import store from './store'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
